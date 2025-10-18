@@ -10,6 +10,7 @@ void setup() {
 
     provisioner.get_creds(ssid, pass);
 
+    WiFi.mode(WIFI_STA);    // added after video
     WiFi.begin(ssid, pass);
 
     while (WiFi.status() != WL_CONNECTED) {}
